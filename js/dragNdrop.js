@@ -12,7 +12,8 @@ jQuery(document).ready(function(){
         url: fetchArticles.ajaxurl, // Including ajax file
         data: {"action": "fetch_articles", "issue_slug": issueSlug }, // Sending data dname to post_word_count function.
         success: function(data){ // Show returned data using the function.
-        	jQuery('<div class="sortable_area"></div>').appendTo('#wpbody').html(data);
+            jQuery(".articles_issues").after(jQuery('<div class="sortable_area"></div>'));
+            jQuery(".sortable_area").html(data);
             jQuery("#sortable_nav").sortable({
                 placeholder: "ui-state-highlight",
                 helper: 'clone',
