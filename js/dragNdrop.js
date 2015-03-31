@@ -2,7 +2,7 @@ jQuery(document).ready(function(){
 	
 	jQuery("select").on('change', function(){
         if(jQuery(".sortable_area")){
-            jQuery(".sortable_area").empty();
+            jQuery(".sortable_area").remove();
         }
 		var issue = jQuery("option:selected");
 		var issueSlug = ( issue.val());
